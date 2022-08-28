@@ -1,3 +1,6 @@
+"""
+converts integer to roman equivalent
+"""
 class Solution(object):
 	def IntToRoman(self,n):
 		
