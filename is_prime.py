@@ -8,6 +8,7 @@ If there were no divisors upto half the numberthen we are guranteed to have no f
 """
 
 import math
+import timeit
 
 def is_prime(no):
 	if no <=1 :
@@ -31,7 +32,28 @@ def is_prime_number(no):
 		i+=2	
 	return is_prime_no
 
-print(is_prime_number(62))
-print(is_prime_number(67))
-print(is_prime_number(144))
-print(is_prime_number(2000))
+def test_is_prime():
+	SETUP_CODE='''
+from __main__ import is_prime'''
+
+	TEST_CODE='''
+is_prime(77673)'''
+	
+	time = timeit.timeit(setup=SETUP_CODE,stmt=TEST_CODE,number=1000)
+	print(f"time taken by is_prime{time}")
+
+def test_is_prime_number():
+
+	SETUP_CODE='''
+from __main__ import is_prime_number'''
+
+	TEST_CODE='''
+is_prime_number(77673)'''
+	
+	time = timeit.timeit(setup=SETUP_CODE,stmt=TEST_CODE,number=1000)
+	print(f"time taken by is_prime_number{time}")
+
+
+test_is_prime()
+test_is_prime_number()
+
