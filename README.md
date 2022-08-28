@@ -1,2 +1,2 @@
 # pythonalgos
-This 
+This repo contains short python scripts
