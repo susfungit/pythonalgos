@@ -10,5 +10,3 @@ def reverse(x:int)->int:
 
 def is_palindrome(x:int)->bool:
 	return False if x < 0 else x==reverse(abs(x))
-
-print(is_palindrome(-2212))
