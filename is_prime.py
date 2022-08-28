@@ -7,6 +7,7 @@ If there were no divisors upto half the numberthen we are guranteed to have no f
  Also more efficient is if we don't find any divisor upto numbers square root, we are guranteed that number is prime. So for example for 113 it is enough to loop only upto 12 rather than following algo which loops to 57
 """
 
+
 import math
 import timeit
 
@@ -36,9 +37,7 @@ def test_is_prime():
 	SETUP_CODE='''
 from __main__ import is_prime'''
 
-	TEST_CODE='''
-is_prime(77673)'''
-	
+	TEST_CODE='''is_prime(97673)'''
 	time = timeit.timeit(setup=SETUP_CODE,stmt=TEST_CODE,number=1000)
 	print(f"time taken by is_prime{time}")
 
@@ -48,7 +47,7 @@ def test_is_prime_number():
 from __main__ import is_prime_number'''
 
 	TEST_CODE='''
-is_prime_number(77673)'''
+is_prime_number(97673)'''
 	
 	time = timeit.timeit(setup=SETUP_CODE,stmt=TEST_CODE,number=1000)
 	print(f"time taken by is_prime_number{time}")
