@@ -2,7 +2,7 @@
 A number that is > 1 is prime if its only divisor is itself. 
 The following algorithm is_prime uses list comprehenssions to build all the divisors of number upto its half and then checks if it is empty.. 
 If there were no divisors upto half the numberthen we are guranteed to have no further divisors . i
- This is inefficient algorithm as it always goes up to half the number .  Ideally we should exit the loop as soon as divisor is found ..i
+  This is inefficient algorithm as it always goes up to half the number .  Ideally we should exit the loop as soon as divisor is found ..i
 
  Also more efficient is if we don't find any divisor upto numbers square root, we are guranteed that number is prime. So for example for 113 it is enough to loop only upto 12 rather than following algo which loops to 57
 """
